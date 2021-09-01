@@ -27,8 +27,11 @@
     ]
   },
   "projects": {
+    "backend": {
+      "tags": ["scope:backend", "type:app"]
+    },
     "frontend-client": {
-      "tags": []
+      "tags": ["scope:frontend-client", "type:app"]
     },
     "frontend-client-e2e": {
       "tags": [],
