@@ -69,9 +69,18 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "apps/frontend-client/src/favicon.ico",
-              "apps/frontend-client/src/assets"
+              "apps/frontend-client/src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/@taiga-ui/icons/src",
+                "output": "assets/taiga-ui/icons"
+            }
             ],
-            "styles": ["apps/frontend-client/src/styles.scss"],
+            "styles": [
+              "apps/frontend-client/src/styles.scss",
+              "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
+              "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"
+            ],
             "scripts": []
           },
           "configurations": {
