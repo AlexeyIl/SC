@@ -1,0 +1,7 @@
+scalar Date
+scalar JSON
+scalar Upload
+
+type Query {
+    text: String
+}
