@@ -5,6 +5,12 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
+    "frontend-client:start": "ng serve frontend-client",
+    "frontend-client:build": "ng build frontend-client",
+    "frontend-client:test": "ng test frontend-client",
+    "backend:start": "ng serve backend",
+    "backend:build": "ng build backend",
+    "backend:test": "ng test backend",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"
