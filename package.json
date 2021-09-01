@@ -13,10 +13,9 @@
     "backend:test": "ng test backend",
     "db:start": "cp .env ./docker-compose && cd docker-compose && docker-compose up -d",
     "db:start-windows": "copy \".env\" \"./docker-compose\" && cd docker-compose && docker-compose up -d",
-
     "db:stop": "cd docker-compose && docker-compose stop && rm .env",
     "db:stop-windows": "cd docker-compose && docker-compose stop && del .env",
-
+    "lint": "nx workspace-lint && ng lint",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"
