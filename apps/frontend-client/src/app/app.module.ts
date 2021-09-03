@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TuiRootModule } from '@taiga-ui/core';
+import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, TuiRootModule],
-  providers: [],
+  imports: [BrowserModule, HttpClientModule, CoreModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
