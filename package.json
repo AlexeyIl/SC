@@ -46,6 +46,8 @@
     "apollo-angular": "^2.6.0",
     "apollo-server-express": "^3.3.0",
     "graphql": "^15.5.2",
+    "graphql-tools": "^8.2.0",
+    "graphql-type-json": "^0.3.2",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.3.0",

@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { environment } from '../environments/environment';
 import { UserEntity } from './user/entities/user.entities';
+import { resolverMap } from './app.resolver';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { UserEntity } from './user/entities/user.entities';
       typePaths: ['./**/*.graphql'],
       context: ({ req }) => ({ req }),
       playground: true,
+      resolvers: [resolverMap],
     }),
     UsersModule,
   ],
