@@ -1,11 +1,10 @@
-import { UserService } from './user/services/user.service';
 import { UsersModule } from './user/users.module';
 import { AppController } from './app.controller';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { environment } from '../environments/environment';
-import { UserEntity } from './user/entities/user.entities';
+import { UserEntity } from './user/entities/user.entity';
 import { resolverMap } from './app.resolver';
 
 @Module({
