@@ -14,11 +14,17 @@
             "depConstraints": [
               {
                 "sourceTag": "scope:backend",
-                "onlyDependOnLibsWithTags": ["scope:backend"]
+                "onlyDependOnLibsWithTags": ["scope:backend", "scope:shared", "type:lib"]
               },
               {
                 "sourceTag": "scope:frontend-client",
-                "onlyDependOnLibsWithTags": ["scope:frontend-client"]
+                "onlyDependOnLibsWithTags": ["scope:frontend-client", "scope:shared", "type:lib"]
+              },
+              {
+                "sourceTag": "lib-type:utils",
+                "onlyDependOnLibsWithTags": [
+                  "lib-type:utils"
+                ]
               }
             ]
           }

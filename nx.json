@@ -36,6 +36,9 @@
     "frontend-client-e2e": {
       "tags": [],
       "implicitDependencies": ["frontend-client"]
+    },
+    "shared-utils-interfaces": {
+      "tags": ["type:lib", "scope:shared", "lib-type:utils"]
     }
   }
 }

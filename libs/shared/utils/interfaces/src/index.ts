@@ -1,0 +1,1 @@
+export * from './lib/entites/user.interface';

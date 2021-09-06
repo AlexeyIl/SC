@@ -74,7 +74,7 @@
                 "glob": "**/*",
                 "input": "node_modules/@taiga-ui/icons/src",
                 "output": "assets/taiga-ui/icons"
-            }
+              }
             ],
             "styles": [
               "apps/frontend-client/src/styles.scss",
@@ -175,6 +175,27 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/frontend-client-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "shared-utils-interfaces": {
+      "root": "libs/shared/utils/interfaces",
+      "sourceRoot": "libs/shared/utils/interfaces/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/utils/interfaces/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/utils/interfaces"],
+          "options": {
+            "jestConfig": "libs/shared/utils/interfaces/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
