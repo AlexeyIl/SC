@@ -23,4 +23,10 @@ export class UserService {
     const newUser = await this.userRepository.create(user);
     return await this.userRepository.save(newUser);
   }
+
+  async findOneByUserName(username: string): Promise<UserEntity> {
+    const users = await this.userRepository.find({ username });
+
+    return users.length === 1 ? users[0] : null;
+  }
 }

@@ -4,7 +4,8 @@
   "projects": {
     "api": {
       "includes": [
-        "./user/*.graphql"
+        "./user/*.graphql",
+        "./auth/*.graphql"
       ]
     }
   },
