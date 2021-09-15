@@ -1,1 +1,1 @@
-export const authIntialState = {}
+export const authInitialState = {}
