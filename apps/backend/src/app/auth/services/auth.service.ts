@@ -17,7 +17,7 @@ export class AuthService {
     private readonly passwordService: PasswordService
   ) {}
 
-  public async validateUser(
+  private async validateUser(
     username: string,
     pass: string
   ): Promise<Omit<UserEntity, 'password'>> {
