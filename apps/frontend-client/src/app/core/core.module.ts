@@ -4,9 +4,11 @@ import { TuiRootModule } from '@taiga-ui/core';
 import { APOLLO_OPTIONS } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 import { createApollo } from './utils/create-apollo';
+import { RootStoreModule } from '@sc/frontend-shared-data-access-root-store';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule, TuiRootModule],
+  imports: [CommonModule, TuiRootModule, RootStoreModule, RouterModule.forRoot([], {initialNavigation: 'enabled'})],
   declarations: [],
   providers: [
     {
