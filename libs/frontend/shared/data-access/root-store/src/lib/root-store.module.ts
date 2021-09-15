@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import * as fromRootStore from './+state/root-store.reducer';
-import { RootStoreEffects } from './+state/root-store.effects';
+import { RouterModule } from '@angular/router';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { reducers } from './+state/root-store.reducer';
+import { rootInitialState } from './+state/root-initial-state';
+import { StoreRouterStateSerializer } from './services/store-router-state-serializer.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    StoreModule.forFeature(
-      fromRootStore.ROOT_STORE_FEATURE_KEY,
-      fromRootStore.reducer
-    ),
-    EffectsModule.forFeature([RootStoreEffects]),
+    RouterModule,
+    StoreModule.forRoot(reducers, {
+      initialState: rootInitialState,
+    }),
+    StoreRouterConnectingModule.forRoot({
+      serializer: StoreRouterStateSerializer,
+    }),
   ],
 })
 export class RootStoreModule {}
