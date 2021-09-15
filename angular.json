@@ -179,6 +179,81 @@
         }
       }
     },
+    "frontend-shared-data-access-auth-store": {
+      "projectType": "library",
+      "root": "libs/frontend/shared/data-access/auth-store",
+      "sourceRoot": "libs/frontend/shared/data-access/auth-store/src",
+      "prefix": "sc",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/shared/data-access/auth-store"],
+          "options": {
+            "jestConfig": "libs/frontend/shared/data-access/auth-store/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/shared/data-access/auth-store/src/**/*.ts",
+              "libs/frontend/shared/data-access/auth-store/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "frontend-shared-data-access-root-store": {
+      "projectType": "library",
+      "root": "libs/frontend/shared/data-access/root-store",
+      "sourceRoot": "libs/frontend/shared/data-access/root-store/src",
+      "prefix": "sc",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/shared/data-access/root-store"],
+          "options": {
+            "jestConfig": "libs/frontend/shared/data-access/root-store/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/shared/data-access/root-store/src/**/*.ts",
+              "libs/frontend/shared/data-access/root-store/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "frontend-shared-data-access-user-store": {
+      "projectType": "library",
+      "root": "libs/frontend/shared/data-access/user-store",
+      "sourceRoot": "libs/frontend/shared/data-access/user-store/src",
+      "prefix": "sc",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/shared/data-access/user-store"],
+          "options": {
+            "jestConfig": "libs/frontend/shared/data-access/user-store/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/shared/data-access/user-store/src/**/*.ts",
+              "libs/frontend/shared/data-access/user-store/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-utils-interfaces": {
       "root": "libs/shared/utils/interfaces",
       "sourceRoot": "libs/shared/utils/interfaces/src",

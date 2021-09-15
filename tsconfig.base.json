@@ -15,6 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@sc/frontend-shared-data-access-root-store": [
+        "libs/frontend/shared/data-access/root-store/src/index.ts"
+      ],
+      "@sc/frontend/shared/data-access/auth-store": [
+        "libs/frontend/shared/data-access/auth-store/src/index.ts"
+      ],
+      "@sc/frontend/shared/data-access/user-store": [
+        "libs/frontend/shared/data-access/user-store/src/index.ts"
+      ],
       "@sc/shared/utils/interfaces": [
         "libs/shared/utils/interfaces/src/index.ts"
       ]

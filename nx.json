@@ -37,6 +37,15 @@
       "tags": [],
       "implicitDependencies": ["frontend-client"]
     },
+    "frontend-shared-data-access-auth-store": {
+      "tags": ["type:lib", "scope:shared", "lib-type:data-access"]
+    },
+    "frontend-shared-data-access-root-store": {
+      "tags": ["type:lib", "scope:shared", "lib-type:data-access"]
+    },
+    "frontend-shared-data-access-user-store": {
+      "tags": ["type:lib", "scope:shared", "lib-type:data-access"]
+    },
     "shared-utils-interfaces": {
       "tags": ["type:lib", "scope:shared", "lib-type:utils"]
     }
