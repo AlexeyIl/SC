@@ -13,6 +13,7 @@ export type TApolloResponse<
   R extends ApolloError = ApolloError
 > = Observable<T | R>;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any,@typescript-eslint/no-unused-vars
 export function extractApolloResponse<T = any>(
   result: ApolloQueryResult<any>,
   entitiesKey?: string[]

@@ -6,9 +6,10 @@ import { HttpLink } from 'apollo-angular/http';
 import { createApollo } from './utils/create-apollo';
 import { RootStoreModule } from '@sc/frontend-shared-data-access-root-store';
 import { RouterModule } from '@angular/router';
+import { StorageModule } from '@sc/shared/utils/storage';
 
 @NgModule({
-  imports: [CommonModule, TuiRootModule, RootStoreModule, RouterModule.forRoot([], {initialNavigation: 'enabled'})],
+  imports: [CommonModule, TuiRootModule, RootStoreModule, StorageModule, RouterModule.forRoot([], {initialNavigation: 'enabled'})],
   declarations: [],
   providers: [
     {

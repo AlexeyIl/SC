@@ -1,4 +1,4 @@
-export interface ICookiesServiceOption {
+export interface ICookieServiceOption {
     expires: Date
     domain: string
     path: string
