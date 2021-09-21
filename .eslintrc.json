@@ -21,12 +21,6 @@
                 "onlyDependOnLibsWithTags": ["scope:frontend-client", "scope:shared", "type:lib"]
               },
               {
-                "sourceTag": "lib-type:utils",
-                "onlyDependOnLibsWithTags": [
-                  "lib-type:utils"
-                ]
-              },
-              {
                 "sourceTag": "lib-type:feature",
                 "onlyDependOnLibsWithTags": [
                   "lib-type:data-access",
