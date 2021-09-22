@@ -2,5 +2,5 @@ import { ISignAuthPayload, ISignAuthResponse, TApolloResponse } from "@sc/shared
 
 export abstract class IAuthApollo {
     abstract signIn(payload: ISignAuthPayload, queryParams?: Record<string, unknown>): TApolloResponse<ISignAuthResponse>
-    abstract signOut(queryParams: Record<string, unknown>): TApolloResponse<void>
+    abstract signOut(queryParams?: Record<string, unknown>): TApolloResponse<void>
 }

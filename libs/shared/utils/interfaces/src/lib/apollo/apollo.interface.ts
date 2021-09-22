@@ -1,6 +1,6 @@
 import { DocumentNode } from 'graphql';
 import { Observable } from 'rxjs';
-import { ApolloError, ApolloQueryResult } from '@apollo/client';
+import { ApolloError } from '@apollo/client';
 
 export interface IApolloRequest {
   keys?: string[];
