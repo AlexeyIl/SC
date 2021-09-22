@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { StorageModule } from '@sc/shared/utils/storage';
 
 @NgModule({
-  imports: [CommonModule, TuiRootModule, RootStoreModule, StorageModule, RouterModule.forRoot([], {initialNavigation: 'enabled'})],
+  imports: [CommonModule, TuiRootModule, RootStoreModule, StorageModule.forRoot(), RouterModule.forRoot([], {initialNavigation: 'enabled'})],
   declarations: [],
   providers: [
     {

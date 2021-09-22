@@ -8,3 +8,6 @@ export * from './lib/storage/cookie-storage.interface';
 export * from './lib/storage/local-storage.interface';
 export * from './lib/storage/session-storage.interface';
 export * from './lib/storage/storage-options.interface';
+export * from './lib/store/action-effect-payload.interface'
+export * from './lib/store/action-force-payload.interface'
+
