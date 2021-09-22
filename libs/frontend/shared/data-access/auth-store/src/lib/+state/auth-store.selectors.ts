@@ -1,8 +1,24 @@
-import { createFeatureSelector, createSelector, State } from '@ngrx/store';
-import { AUTH_STORE_FEATURE_KEY } from './auth-store.reducer';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+
 import { IAuthState } from '../interfaces/auth-state.interface';
-
-
-// Lookup the 'AuthStore' feature state managed by NgRx
+import { AUTH_STORE_FEATURE_KEY } from './auth-store.reducer';
 
 export const getAuthState = createFeatureSelector<IAuthState>(AUTH_STORE_FEATURE_KEY);
+
+export const getSignIn = createSelector(getAuthState, (state) => state.signIn);
+export const getSignInRun = createSelector(
+  getAuthState,
+  (state) => state.signInRun
+);
+export const getSignInFailure = createSelector(
+  getAuthState,
+  (state) => state.signInError
+);
+export const getSignOutRun = createSelector(
+  getAuthState,
+  (state) => state.signOutRun
+);
+export const getSignOutFailure = createSelector(
+  getAuthState,
+  (state) => state.signOutError
+);

@@ -1,8 +1,9 @@
-import {ISignAuthPayload} from '@sc/shared/utils/interfaces'
+import { ISignAuthPayload } from '@sc/shared/utils/interfaces';
 import { ApolloError } from '@apollo/client';
 export interface IAuthState {
-    signIn: ISignAuthPayload
-    signInError: ApolloError
-    signInRun: boolean
-    signOurRun: boolean
+  signOutError: ApolloError;
+  signIn: ISignAuthPayload;
+  signInError: ApolloError;
+  signInRun: boolean;
+  signOutRun: boolean;
 }
