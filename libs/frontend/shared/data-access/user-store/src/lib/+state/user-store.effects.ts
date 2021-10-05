@@ -1,4 +1,4 @@
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { DataPersistence } from '@nrwl/angular';
 import { Action } from '@ngrx/store';
 import { createEffect } from '@ngrx/effects';
@@ -50,8 +50,6 @@ export class UserEffects extends AbstractEffects<IUserState> {
   constructor(
     private dataPersistence: DataPersistence<IUsersStoreFeatureKey>,
     private userApollo: IUserApollo,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    @Inject(PLATFORM_ID) private platformId: any
   ) {
     super(USER_FEATURE_KEY);
   }
