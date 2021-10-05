@@ -1,45 +1,30 @@
-import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
-import { createReducer, on, Action } from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 
-import * as UserStoreActions from './user-store.actions';
-import { UserStoreEntity } from './user-store.models';
+import { IUserState } from '../interfaces/user-state.interface';
+import * as UserActions from './user-store.actions';
+import { userInitialState } from './user-initial-state';
 
-export const USER_STORE_FEATURE_KEY = 'userStore';
+export const USER_FEATURE_KEY = 'user';
 
-export interface State extends EntityState<UserStoreEntity> {
-  selectedId?: string | number; // which UserStore record has been selected
-  loaded: boolean; // has the UserStore list been loaded
-  error?: string | null; // last known error (if any)
-}
-
-export interface UserStorePartialState {
-  readonly [USER_STORE_FEATURE_KEY]: State;
-}
-
-export const userStoreAdapter: EntityAdapter<UserStoreEntity> =
-  createEntityAdapter<UserStoreEntity>();
-
-export const initialState: State = userStoreAdapter.getInitialState({
-  // set initial required properties
-  loaded: false,
-});
-
-const userStoreReducer = createReducer(
-  initialState,
-  on(UserStoreActions.init, (state) => ({
+const userReducer = createReducer(
+  userInitialState,
+  on(UserActions.loadUserRun, (state) => ({
     ...state,
-    loaded: false,
-    error: null,
+    userLoadRun: true,
+    userLoadFailure: null,
   })),
-  on(UserStoreActions.loadUserStoreSuccess, (state, { userStore }) =>
-    userStoreAdapter.setAll(userStore, { ...state, loaded: true })
-  ),
-  on(UserStoreActions.loadUserStoreFailure, (state, { error }) => ({
+  on(UserActions.loadUserSuccess, (state, { payload }) => ({
     ...state,
-    error,
+    user: payload,
+    userLoadRun: false,
+  })),
+  on(UserActions.loadUserFailure, (state, { payload }) => ({
+    ...state,
+    userLoadRun: false,
+    userLoadFailure: payload,
   }))
 );
 
-export function reducer(state: State | undefined, action: Action) {
-  return userStoreReducer(state, action);
+export function reducer(state: IUserState | undefined, action: Action) {
+  return userReducer(state, action);
 }
