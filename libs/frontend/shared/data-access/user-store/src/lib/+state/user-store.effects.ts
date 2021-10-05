@@ -46,10 +46,9 @@ export class UserEffects extends AbstractEffects<IUserState> {
         this.errorHandler(action, error, UserActions.loadUserFailure),
     })
   );
-
   constructor(
     private dataPersistence: DataPersistence<IUsersStoreFeatureKey>,
-    private userApollo: IUserApollo,
+    private userApollo: IUserApollo
   ) {
     super(USER_FEATURE_KEY);
   }
