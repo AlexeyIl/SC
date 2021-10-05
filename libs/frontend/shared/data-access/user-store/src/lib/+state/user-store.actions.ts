@@ -4,14 +4,14 @@ import { ApolloError } from '@apollo/client';
 import { payload, payloadForce } from '@sc/shared/utils/store';
 import { IUser } from '@sc/shared/utils/interfaces';
 
-export const loadUser = createAction('[Users] Load User', payloadForce());
-export const loadUserCancel = createAction('[Users] Load User Cancel');
-export const loadUserRun = createAction('[Users] Load User Run');
+export const loadUser = createAction('[User] Load User', payloadForce());
+export const loadUserCancel = createAction('[User] Load User Cancel');
+export const loadUserRun = createAction('[User] Load User Run');
 export const loadUserSuccess = createAction(
-  '[Users] Load User Success',
+  '[User] Load User Success',
   payload<IUser>()
 );
 export const loadUserFailure = createAction(
-  '[Users] Load User Failure',
+  '[User] Load User Failure',
   payload<ApolloError>()
 );
